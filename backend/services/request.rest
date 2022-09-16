@@ -1,0 +1,60 @@
+# Buyer
+GET http://localhost:8000/buyers
+
+###
+GET http://localhost:8000/buyers/1
+
+###
+POST http://localhost:8000/buyers
+Content-Type: application/json
+
+{
+    "name": "Muhammad Irvan",
+    "telephone": 999,
+    "address": "Jl. Rawa Indah No. 55",
+    "firstPcs": true
+}
+
+###
+PATCH http://localhost:8000/buyers/2
+Content-Type: application/json
+
+{
+    "name": "Irvan Update",
+    "telephone": 082112367972,
+    "address": "Jl. Rawa Indah"
+}
+
+###
+DELETE http://localhost:8000/buyers/2
+
+# Users Admin
+###
+GET http://localhost:8000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjksIm5hbWUiOiJBbnRvIiwiZW1haWwiOiJhbnRvQGdtYWlsLmNvbSIsImlhdCI6MTY2MjQ1ODcyMywiZXhwIjoxNjYyNDU4NzQzfQ.LqQTyTm0mPbQ-2bjRTW3WipVrk781OlIFyAxxmbUwRw
+
+###
+POST http://localhost:8000/users
+Content-Type: application/json
+
+{
+    "name": "Anto",
+    "email": "anto@gmail.com",
+    "password": "anto",
+    "confPassword": "anto"
+}
+
+###
+POST http://localhost:8000/login
+Content-Type: application/json
+
+{
+    "email": "anto@gmail.com",
+    "password": "anto"
+}
+
+###
+DELETE http://localhost:8000/logout
+
+###
+DELETE http://localhost:8000/users/9

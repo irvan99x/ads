@@ -1,0 +1,543 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --mainColor: #043b5c;
+  --secondColor: #0b7fab;
+  --whiteColor: #ffffff;
+  --thirdColor: #002c47;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Login Page */
+.container-body {
+  background-color: #2691d9;
+  height: 100vh;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+}
+.center h1 {
+  color: #4c4c4c;
+  text-align: center;
+  padding: 20px 0;
+  font-weight: 600;
+  border-bottom: 1px solid silver;
+}
+.center form {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+form .txt_field {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0;
+}
+.txt_field input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.txt_field label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.txt_field span::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #2691d9;
+  transition: 0.5s;
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label {
+  top: -5px;
+  color: #2691d9;
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before {
+  width: 100%;
+}
+.pass {
+  margin: -5px 0 20px 5px;
+  color: #a6a6a6;
+  cursor: pointer;
+  text-align: end;
+}
+.pass:hover {
+  text-decoration: underline;
+}
+input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  background: #2691d9;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  margin-top: 12px;
+}
+input[type="submit"]:hover {
+  border-color: #2691d9;
+  transition: 0.5s;
+}
+.signup_link {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #666666;
+}
+.signup_link a {
+  color: #2691d9;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* .signup_link a:hover {
+      text-decoration: underline;
+    } */
+
+.input-element-wrapper {
+  display: flex;
+}
+
+.input-element-wrapper .btn-eye {
+  background-color: transparent;
+  border: none;
+  margin-top: 8px;
+  color: grey;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Sidebar */
+main {
+  padding: 10px;
+}
+
+.main-container {
+  display: flex;
+  float: left;
+}
+
+.sidebar {
+  background: var(--mainColor);
+  color: white;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.top_section {
+  background-color: var(--thirdColor);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10px;
+}
+
+.logo {
+  font-size: 18px;
+  line-height: 0;
+}
+.bars {
+  width: 30px;
+}
+.hide {
+  display: none;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  height: 30px;
+  padding: 10px;
+  padding-top: 15px;
+}
+.search_icon {
+  padding-top: 6px;
+}
+.search input {
+  border: none;
+  margin-left: 10px;
+  border-radius: 5px;
+  background: rgb(238, 238, 238);
+
+  color: white;
+}
+
+.routes {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+/* .routes:hover {
+  background: var(--secondColor);
+} */
+
+.link {
+  display: flex;
+  color: white;
+  gap: 10px;
+  padding: 5px 10px;
+  border-right: 4px solid transparent;
+  transition: 0.1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.link:hover {
+  border-right: 4px solid white;
+  background: var(--secondColor);
+  transition: 0.1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.active {
+  border-right: 4px solid white;
+  background: var(--secondColor);
+}
+.link_text {
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+.menu {
+  display: flex;
+  color: white;
+
+  padding: 5px 10px;
+  border-right: 4px solid transparent;
+  transition: 0.1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  justify-content: space-between;
+}
+.menu_item {
+  display: flex;
+  gap: 10px;
+}
+.menu_container {
+  display: flex;
+  flex-direction: column;
+}
+.menu_container .link {
+  padding-left: 20px;
+  /* border-bottom: #fff 0.1px solid; */
+}
+
+ul {
+  list-style: none;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* Navbar */
+.nav {
+  /* display: flex; */
+  height: 55px;
+  background: var(--thirdColor);
+  color: #fff;
+}
+
+.container-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+}
+
+.container-nav h3 {
+  font-weight: 300;
+}
+
+.container-nav button {
+  background-color: var(--mainColor);
+  border: none;
+  color: white;
+  text-align: center;
+  margin-right: 100px;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 18px;
+  border-radius: 10px;
+}
+
+.container-nav button:hover {
+  background-color: var(--secondColor);
+}
+
+/* Dashboard */
+.container-text {
+  margin: auto;
+  width: 90%;
+  padding: 8px;
+  height: 50px;
+  border-radius: 20px;
+  border: 2px solid var(--mainColor);
+}
+
+.container-text h2 {
+  font-weight: 400;
+  font-size: 20px;
+  margin-left: 12px;
+  color: black;
+}
+
+/* Table */
+.table_section {
+  height: 500;
+  overflow: auto;
+}
+
+table {
+  width: 92%;
+  table-layout: fixed;
+  min-width: 900px;
+  border-collapse: collapse;
+  margin-left: 5px;
+  margin-top: 8px;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  background-color: #f6f9fc;
+  color: #8493a5;
+  font-size: 15px;
+}
+
+th,
+td {
+  border-bottom: 1px solid #dddddd;
+  padding: 5px 20px;
+  word-break: break-all;
+  text-align: center;
+}
+
+tr:hover td {
+  color: #0298cf;
+  /* cursor: pointer; */
+  background-color: #f6f9fc;
+}
+
+td button {
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 5px;
+  padding-top: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-bottom: 1px;
+  color: #fff;
+}
+
+td button:nth-child(1) {
+  background-color: #0298cf;
+}
+
+td button:nth-child(2) {
+  background-color: #f80000;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 3);
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 3);
+}
+
+/* List Admin */
+.container-text {
+  margin: auto;
+  width: 90%;
+  padding: 8px;
+  height: 50px;
+  border-radius: 20px;
+  border: 2px solid var(--mainColor);
+}
+
+.container-text h2 {
+  font-weight: 400;
+  font-size: 20px;
+  margin-left: 12px;
+  color: black;
+}
+
+.container-add {
+  height: 60px;
+}
+
+.btn-add {
+  display: flex;
+  align-items: center;
+  margin-top: 14px;
+  float: right;
+  background-color: green;
+  border: none;
+  padding: 10px;
+  border-radius: 50px;
+  color: #fff;
+  margin-right: 100px;
+  cursor: pointer;
+}
+
+.btn-add:hover {
+  background-color: rgb(0, 100, 0);
+}
+*/
+
+
+/* Add Admin */
+.container-body-addadmin {
+  background-color: var(--secondColor);
+  height: 100vh;
+}
+
+.center-addadmin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+}
+.center-addadmin h1 {
+  color: #4c4c4c;
+  text-align: center;
+  padding: 20px 0;
+  font-weight: 600;
+  border-bottom: 1px solid silver;
+}
+.center-addadmin form {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+form .txt_field {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0;
+}
+.txt_field input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.txt_field label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.txt_field span::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #2691d9;
+  transition: 0.5s;
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label {
+  top: -5px;
+  color: #2691d9;
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before {
+  width: 100%;
+}
+.pass {
+  margin: -5px 0 20px 5px;
+  color: #a6a6a6;
+  cursor: pointer;
+  text-align: end;
+}
+.pass:hover {
+  text-decoration: underline;
+}
+input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  background: #2691d9;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+input[type="submit"]:hover {
+  border-color: #2691d9;
+  transition: 0.5s;
+}
+.signup_link {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #666666;
+}
+.signup_link a {
+  color: #2691d9;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* .signup_link a:hover {
+        text-decoration: underline;
+      } */
+
+.input-element-wrapper .btn-eye {
+  background-color: transparent;
+  border: none;
+  margin-top: 8px;
+  color: grey;
+  cursor: pointer;
+  outline: none;
+}
